@@ -4,8 +4,9 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(120deg, #2c3e50, #4ca1af);
     color: #ecf0f1;
-    height: 100vh;
-    overflow-y: auto;
+    min-height: 100vh; /* Ensure body takes full height of the content */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Main page container */
@@ -13,6 +14,9 @@ body {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
+    max-width: 1200px;  /* Optional: Add a max-width to prevent too wide content */
+    margin: 0 auto; /* Centers the content */
+    flex: 1; /* Allows the content to expand and fill remaining space */
 }
 
 /* Header styling */
@@ -27,6 +31,7 @@ body {
 .code-section {
     width: 100%;
     text-align: left;
+    margin-top: 20px;
 }
 
 .code-section h2 {
@@ -36,6 +41,12 @@ body {
 }
 
 /* Code block styling */
+.code-block-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
 .code-block {
     background-color: #1e272e;
     color: #dcdde1;
@@ -43,17 +54,8 @@ body {
     border-radius: 8px;
     font-size: 1rem;
     line-height: 1.6;
-    overflow-x: auto;
-    overflow-y: auto;
     max-height: 400px; /* Adjust this height as per your needs */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.code-block code {
-    font-family: 'Courier New', Courier, monospace;
-    white-space: pre;
-    display: block;
-    text-align: left;
 }
 
 /* Scrollbars for the code block */
@@ -79,5 +81,6 @@ body {
 
     .code-block {
         font-size: 0.9rem;
+        max-height: 300px; /* Adjust this height for mobile */
     }
 }

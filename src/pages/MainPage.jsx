@@ -1,4 +1,6 @@
-
+import React from 'react';
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import './MainPage.css';
 
 const MainPage = () => {
@@ -10,7 +12,7 @@ const MainPage = () => {
         self.n = len(matrix) # for inverse
 
     def __str__(self):
-        return "\n".join(["\t".join(map(str, row)) for row in self.matrix])
+        return "\\n".join(["\\t".join(map(str, row)) for row in self.matrix])
 
     def __add__(self, other):
         if self.rowLength != other.rowLength or self.columnLength != other.rowLength:
@@ -59,9 +61,11 @@ const MainPage = () => {
       </header>
       <section className="code-section">
         <h2>Python Code</h2>
-        <pre className="code-block">
-          <code>{pythonCode}</code>
-        </pre>
+        <div className="code-block-container">
+          <SyntaxHighlighter language="python" style={docco}>
+            {pythonCode}
+          </SyntaxHighlighter>
+        </div>
       </section>
     </div>
   );
