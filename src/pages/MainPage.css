@@ -1,0 +1,83 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #2c3e50, #4ca1af);
+    color: #ecf0f1;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Main page container */
+.main-page {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+.main-header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+    text-align: left;
+}
+
+/* Code section */
+.code-section {
+    width: 100%;
+    text-align: left;
+}
+
+.code-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ecf0f1;
+}
+
+/* Code block styling */
+.code-block {
+    background-color: #1e272e;
+    color: #dcdde1;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 400px; /* Adjust this height as per your needs */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.code-block code {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+    display: block;
+    text-align: left;
+}
+
+/* Scrollbars for the code block */
+.code-block::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.code-block::-webkit-scrollbar-thumb {
+    background-color: #57606f;
+    border-radius: 4px;
+}
+
+.code-block::-webkit-scrollbar-thumb:hover {
+    background-color: #747d8c;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .code-block {
+        font-size: 0.9rem;
+    }
+}
